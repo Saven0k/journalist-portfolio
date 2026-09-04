@@ -1,0 +1,205 @@
+@import '../../styles/variables.scss';
+
+.about {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, $dark, rgba($primary, 0.05), $dark);
+
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__text {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba($primary, 0.15);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba($primary, 0.3);
+      box-shadow: $shadow-primary;
+    }
+
+    .about__badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba($primary, 0.2);
+      border-radius: 40px;
+      margin-bottom: 20px;
+      border: 1px solid rgba($primary, 0.3);
+
+      .badge-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: $primary;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .about__intro {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba($primary, 0.2);
+      font-weight: 500;
+    }
+
+    .about__list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.85;
+        padding: 8px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        &::before {
+          content: "▹";
+          color: $primary;
+          font-size: 14px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba($primary, 0.15);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 20px 15px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+
+      &:hover {
+        background: rgba($primary, 0.12);
+        transform: scale(1.03);
+        border-color: rgba($primary, 0.3);
+        box-shadow: $shadow-primary;
+      }
+
+      &-number {
+        display: block;
+        font-size: 32px;
+        font-weight: 800;
+        background: $gradient-primary;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 8px;
+        line-height: 1.2;
+
+        @media (max-width: $mobile) {
+          font-size: 26px;
+        }
+      }
+
+      &-label {
+        font-size: 13px;
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 500;
+
+        @media (max-width: $mobile) {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  &__social {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid rgba($primary, 0.15);
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: $primary;
+    }
+
+    .social__links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social__link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba($primary, 0.1);
+      border-radius: 40px;
+      text-decoration: none;
+      color: $light;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba($primary, 0.2);
+
+      &:hover {
+        background: rgba($primary, 0.2);
+        transform: translateY(-2px);
+        box-shadow: $shadow-primary;
+      }
+
+      .social__icon {
+        font-size: 18px;
+      }
+    }
+  }
+}
