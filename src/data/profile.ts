@@ -21,24 +21,22 @@ export const profile = {
         ru: "Журналист",
         en: "Journalist"
     },
-    email: "anna@journalist.com",
+    email: "mariaodnosteblets@yandex.ru",
     phone: "+7 (999) 123-45-67",
 
     about: {
         ru: {
-            intro: "Я журналист с 5-летним опытом работы в крупных медиа. Специализируюсь на социальной журналистике и расследованиях.",
+            intro: "Я журналист с 3-летним опытом работы в крупных медиа. Специализируюсь на социальной журналистике и расследованиях.",
             points: [
-                "Автор более 200 публикаций в ведущих СМИ",
-                "Финалист премии «Золотое перо» 2024",
+                "Автор более 100 публикаций в ведущих СМИ",
                 "Эксперт по социальной тематике",
                 "Владею методами интервью и расследований"
             ]
         },
         en: {
-            intro: "Journalist with 5 years of experience in major media. Specialize in social journalism and investigations.",
+            intro: "Journalist with 3 years of experience in major media. Specialize in social journalism and investigations.",
             points: [
-                "Author of 200+ publications in leading media",
-                "Finalist of 'Golden Pen' award 2024",
+                "Author of 100+ publications in leading media",
                 "Expert in social topics",
                 "Skilled in interviews and investigations"
             ]
@@ -48,39 +46,54 @@ export const profile = {
     articles: [
         {
             title: {
-                ru: "Как городские сообщества меняют жизнь",
+                ru: "Тише едешь – дальше будешь: стоит ли торопиться получать водительские права",
                 en: "How Urban Communities Change Lives"
             },
             description: {
-                ru: "Исследование о влиянии локальных сообществ на качество жизни в мегаполисе",
+                ru: "Сейчас закон позволяет начать обучение в автошколе в 16–17 лет, сдать экзамен в ГИБДД заранее, чтобы сразу по достижении 18 лет получить заветное удостоверение. Но надо ли спешить в таком серьезном деле?",
                 en: "A study on the impact of local communities on quality of life in the metropolis"
             },
-            link: "#",
+            link: "https://kubnews.ru/obshchestvo/2025/03/25/tishe-edesh-dalshe-budesh-stoit-li-toropitsya-poluchat-voditelskie-prava/#1",
             date: "2025",
             category: {
-                ru: "Социология",
+                ru: "Общество",
                 en: "Sociology"
             }
         },
         {
             title: {
-                ru: "Новые медиа: будущее журналистики",
+                ru: "Жизнь после ЕГЭ: что думают выпускники школ о своих будущих профессиях",
                 en: "New Media: The Future of Journalism"
             },
             description: {
-                ru: "Анализ трансформации журналистики в цифровую эпоху",
+                ru: "В идеале, за три месяца до ЕГЭ выпускник уже не только выбрал будущую профессию, но и вовсю готовится к экзаменам по необходимым для поступления в нужный вуз предметам. На деле же до сих пор определились со своим будущим не все. И даже из тех, кто определился, не каждый стопроцентно уверен в своем выборе. Ничего страшного или «все пропало»? Давайте разбираться.",
                 en: "Analysis of journalism transformation in the digital age"
             },
-            link: "#",
+            link: "https://kubnews.ru/obshchestvo/2025/02/24/zhizn-posle-ege-chto-dumayut-vypuskniki-shkol-o-svoikh-budushchikh-professiyakh/#1",
             date: "2025",
             category: {
-                ru: "Медиа",
+                ru: "Общество",
+                en: "Media"
+            }
+        },
+        {
+            title: {
+                ru: "По главной улице и не только: где туристу прогуляться в Краснодаре",
+                en: "New Media: The Future of Journalism"
+            },
+            description: {
+                ru: "Оказавшись в столице Кубани как гость, вы наверняка захотите познакомиться с его достопримечательностями. Но куда пойти в первую очередь? Давайте разбираться.",
+                en: "Analysis of journalism transformation in the digital age"
+            },
+            link: "https://kubnews.ru/obshchestvo/2025/04/18/po-glavnoy-ulitse-i-ne-tolko-gde-turistu-progulyatsya-v-krasnodare/#1",
+            date: "2025",
+            category: {
+                ru: "Общество",
                 en: "Media"
             }
         }
     ],
 
-    // Статические тексты для всех компонентов
     staticTexts: {
         ru: {
             heroBadge: "Журналист",

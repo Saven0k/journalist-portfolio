@@ -13,8 +13,18 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'framer-motion']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('framer-motion')) {
+              return 'vendor';
+            }
+            if (id.includes('sass')) {
+              return 'styles';
+            }
+          }
+          if (id.includes('src/components')) {
+            return 'components';
+          }
         }
       }
     }
