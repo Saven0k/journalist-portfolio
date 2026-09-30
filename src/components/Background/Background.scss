@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0a0a12 70%);
+  pointer-events: none;
+}
+
+.bg-photo {
+  position: absolute;
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  opacity: 0.55;                 // 👈 было 0.12 — сильно мало
+  filter: blur(0.5px) saturate(1.2);
+  transform: translate(-50%, -50%) rotate(-6deg);
+  animation: float 25s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);  // 👈 объём
+}
+
+@keyframes float {
+  0%   { transform: translate(-50%, -50%) rotate(-6deg) scale(1); }
+  50%  { transform: translate(-50%, -60%) rotate(4deg) scale(1.08); opacity: 0.7; }
+  100% { transform: translate(-50%, -40%) rotate(-3deg) scale(1.02); }
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  // 👇 было очень тёмно — теперь лёгкая вуаль
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 20, 0.55) 0%,
+    rgba(10, 10, 20, 0.75) 100%
+  );
+  // backdrop-filter: blur(2px);  // ← убираем совсем или ослабляем до 0.5px
+}
+
+@media (max-width: $mobile) {
+  .bg-photo { width: 160px; height: 110px; opacity: 0.45; }
+}
